@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="modules/search/search.css" type="text/css"/>
+<div class="content">
+    <h4>搜索结果</h4>
+    <div class="search-filter">
+        <p class="search-filter-tittle">
+            <img src="images/search/BG_star_10x12.png">
+            <span class="search-name">‘{{searchText}}’</span>
+            <span class="search-text">搜索结果：</span>
+            <span class="search-count">共 {{count}} 件</span>
+        </p>
+        <div class="search-filter-main">
+            <div class="srchOpt">
+                <p class="btn">
+                    <a id="srchOptA">按类型搜索</a>
+                </p>
+                <div class="list" id="list1">
+                    <ul>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory"  ng-click = "getPdtCategory('护肤水')">
+                            <label>护肤水</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('乳液')">
+                            <label>乳液</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('精华液')">
+                            <label>精华液</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('面霜')">
+                            <label>面霜</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('眼霜')">
+                            <label>眼霜</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('喷雾')">
+                            <label>喷雾</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="input-check" name="pdtCategory" ng-click = "getPdtCategory('唇部护理')">
+                            <label>唇部护理</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="srchOpt">
+                <p class="btn">
+                    <a id="srchOptB">按原料搜索</a>
+                </p>
+                <div class="list" id="list2">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="input-check">
+                            <label>绿茶精粹</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="input-check">
+                            <label>浆果美白</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="input-check">
+                            <label>橄榄</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="input-check">
+                            <label>面膜</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <input type="button" class="btn-condition" ng-click = 'conditionSearch()'>
+            <input type="button" class="reset-condition">
+            <!--<div class="search-input">-->
+                <!--<input type="text" placeholder="输入商品名称" class="input1" ng-model="searchText">-->
+            <!--</div>-->
+            <!--<input type="button" class="btn-input"  ng-click = 'search()'>-->
+        </div>
+    </div>
+    <div class="search-list">
+        <ul class="product-filter-nav">
+            <li><a class="a-on">按最新顺序排列</a></li>
+            <li><a>按人气排列</a></li>
+            <li><a>按用户评价排列</a></li>
+            <li><a>价格从高到低</a></li>
+            <li><a>价格从低到高</a></li>
+            <li><a>按优惠排列</a></li>
+        </ul>
+        <div class="product-list">
+            <ul>
+                <li ng-repeat="p in searchProductList">
+                    <div>
+                        <img ng-src = 'images/index/{{p.p_index_img}}'  ng-click = "showDetail(p.p_id)">
+                        <dl class="list-dl">
+                            <dd>
+                                <img src="images/search/BG_func1.gif">
+                                <p>预览</p>
+                            </dd>
+                            <dd>
+                                <img src="images/search/BG_func2.gif">
+                                <p>收藏夹</p>
+                            </dd>
+                            <dd class="no-border-right" ng-click = 'productToCar(p.p_id)'>
+                                <img src="images/search/BG_func3.gif">
+                                <p>购物车</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p>{{p.p_name}}</p>
+                    <span>￥{{p.p_price}}</span>
+                </li>
+
+            </ul>
+        </div>
+        <!--<div class="list-page">-->
+            <!--<input type="button" class="btn-pre">-->
+            <!--<ul class="page-ul">-->
+                <!--<li>1</li>-->
+                <!--<li>2</li>-->
+                <!--<li>3</li>-->
+            <!--</ul>-->
+            <!--<input type="button" class="btn-next">-->
+        <!--</div>-->
+    </div>
+</div>
+<script src="js/searchFunction.js"></script>

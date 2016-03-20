@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="modules/index/index.js"></script>
+    <script src="modules/login/login.js"></script>
+    <script src="modules/reg/reg.js"></script>
+    <script src="modules/search/search.js"></script>
+    <script src="modules/info/info.js"></script>
+    <script src="modules/car/car.js"></script>
+    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+</head>
+<body ng-controller="mainController">
+<div class="header">
+    <div class="header-main">
+        <div class="header-top">
+            <a class="bg-home"><img src="images/main/txt_welcomeMsg.png"></a>
+            <ul>
+                <li class="no-background">
+                    <a href="#/login" ng-hide="user">
+                        <img src="images/main/header_util_login.png" alt="" />
+                    </a>
+                    <a href="" ng-show="user">
+                        <span ng-show="user">欢迎您  {{user.u_realName}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/reg" ng-hide="user">
+                        <img src="images/main/header_util_register.png" alt="" ng-hide="user"/>
+                    </a>
+                    <a href="" ng-show="user" ng-click = 'logOut()'>
+                        <span>退出</span>
+                    </a>
+                </li>
+                <li><a href="" ng-click = 'toCar()'><img src="images/main/header_util_cart.png" alt=""/></a></li>
+                <li><a href=""><img src="images/main/header_util_mypage.png" alt=""/></a></li>
+                <li><a href=""><img src="images/main/header_util_cs.png" alt=""/></a></li>
+                <li><a href="" class="no-padding-right"><img src="images/main/header_util_findShop.png" alt=""/></a></li>
+            </ul>
+        </div>
+        <div class="header-middle">
+            <a class="a-logo"><img src="images/main/logo.png"></a>
+            <div class="searchDiv">
+                <img src="images/main/header_quick_bestseller.png" class="bestseller">
+                <img src="images/main/header_quick_newPdt.png" class="newPdt">
+                <img src="images/main/header_quick_mdsPick.png" class="mdsPick">
+                <div class="search-form">
+                    <input type="text" name="search" ng-model="searchText" placeholder="输入商品名称或商品类别">
+                    <button class="search-btn" ng-click = 'search()'></button>
+                </div>
+            </div>
+            <img src="images/main/header_ad_20151124.jpg" class="header_ad">
+            <img src="images/main/header_mark.gif">
+        </div>
+        <div class="header-bottom">
+            <ul class="header-bottom-nav">
+                <li class="quickShopping"><a href=""></a></li>
+                <li class="gnb_menu1"><a href=""></a></li>
+                <li class="gnb_menu2"><a href=""></a></li>
+                <li class="gnb_menu3"><a href="#/index"></a></li>
+                <li class="gnb_menu4"><a href=""></a></li>
+                <li class="gnb_menu5"><a href=""></a></li>
+            </ul>
+            <div class="login-form" ng-hide="user">
+                <input type="text" name="userName" placeholder="邮箱" ng-model="username">
+                <input type="password" name="pwd" placeholder="密码" ng-model="password">
+                <input type="button" ng-click = 'login()'>
+                <span></span>
+            </div>
+            <div ng-show="user" class="welcomeDiv">
+                <span>欢迎您 {{user.u_realName}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view></div>
+<div class="footer">
+    <div class="footer-main">
+        <div class="footer-top">
+            <div class="footer-top-left">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><a>商城</a></dt>
+                            <dd><a>基础护理</a></dd>
+                            <dd><a>面膜</a></dd>
+                            <dd><a>洁面与卸妆</a></dd>
+                            <dd><a>防晒</a></dd>
+                            <dd><a>面部底妆</a></dd>
+                            <dd><a>彩妆</a></dd>
+                            <dd><a>指甲油</a></dd>
+                            <dd><a>身体护理</a></dd>
+                            <dd><a>男士系列</a></dd>
+                            <dd><a>优惠套装</a></dd>
+                            <dd><a>美容工具</a></dd>
+                            <dd><a>新商品</a></dd>
+                            <dd><a>Inni 产品地图</a></dd>
+                            <dd><a>现实活动</a></dd>
+                            <dd><a>小清新推荐</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="have-margin-bottom">
+                            <dt><a>活动</a></dt>
+                            <dd><a>正在进行的活动</a></dd>
+                            <dd><a>过去进行的活动</a></dd>
+                            <dd><a>美丽体验</a></dd>
+                            <dd><a>活动中奖名单</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a>应用中心</a></dt>
+                            <dd><a>登陆</a></dd>
+                            <dd><a>加入会员</a></dd>
+                            <dd><a>购物车</a></dd>
+                            <dd><a>我的主页</a></dd>
+                            <dd><a>客服中心</a></dd>
+                            <dd><a>专卖店导航</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="have-margin-bottom">
+                            <dt><a>社区</a></dt>
+                            <dd><a>分享小清新</a></dd>
+                            <dd><a>绿茶农场游戏</a></dd>
+                            <dd><a>原料老虎机</a></dd>
+                            <dd><a>inni社交圈</a></dd>
+                            <dd><a>inni粉积分榜</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a>客服中心</a></dt>
+                            <dd><a>公告板</a></dd>
+                            <dd><a>使用说明</a></dd>
+                            <dd><a>会员服务</a></dd>
+                            <dd><a>1：1在线咨询</a></dd>
+                            <dd><a>Q&A 留言板</a></dd>
+                            <dd><a>FAQ</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="have-margin-bottom">
+                            <dt><a>品牌简介</a></dt>
+                            <dd><a>品牌介绍</a></dd>
+                            <dd><a>社会贡献</a></dd>
+                            <dd><a>广告视频</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a>济州岛故事</a></dt>
+                            <dd><a>济州之家介绍</a></dd>
+                            <dd><a>济州治愈音乐</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-top-right">
+                <dl class="have-margin-bottom">
+                    <dt>咨询热线</dt>
+                    <dd>小清新（售前）周一到周日</dd>
+                    <dd>9：00~24：00</dd>
+                </dl>
+                <dl>
+                    <dd>官网服务热线：</dd>
+                    <dd>021-61255625（9：00~21：00）</dd>
+                    <dd>产品咨询热线：</dd>
+                    <dd>400-920-9238</dd>
+                    <dd>800-820-3596</dd>
+                    <dd>（周一至周五9：00~18：00）</dd>
+                </dl>
+                <p class="QR-code">
+                    <img src="images/main/QR-code.png">
+                    <span>扫描保存悦诗风吟手机网站</span>
+                </p>
+            </div>
+            <div class="footer-notice">
+                <p><strong>公告板</strong>【物流】2016年春节官网客服安排物流通知
+                    <span>
+                        <a><img src="images/main/txt_inniSNS.png"></a>
+                    <a><img src="images/main/ico_footerSNS_renren.gif"></a>
+                    <a><img src="images/main/ico_footerSNS_weibo.gif"></a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="images/main/footer_logo.png" class="footer_logo">
+            <div class="footer-bottom-text">
+                <p>网站使用条款 沪ICP备11011083号</p>
+                <p>客服邮件：innisfree@innisfree.cn</p>
+                <p>公司地址：上海市延安东路700号港泰广场23楼 200001</p>
+                <p class="p-last">copyright@2011 amorepacific corporation.All rights reserved</p>
+            </div>
+            <div class="footer-bottom-images">
+                <img src="images/main/ico_footerMark1.png">
+                <img src="images/main/ico_footerMark2.png">
+                <img src="images/main/ico_footerMark3.png">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

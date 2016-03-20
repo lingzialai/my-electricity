@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="modules/reg/reg.css" type="text/css"/>
+<div class="content">
+    <div class="content-left">
+        <ul>
+            <li><a href="#/login">会员登录</a></li>
+            <li><a  class="a-on">加入会员</a></li>
+            <li><a >找回密码</a></li>
+            <li><a >使用条款</a></li>
+            <li><a >隐私声明</a></li>
+        </ul>
+    </div>
+    <div class="content-right">
+        <div class="content-right-tittle">
+            <h3>会员信息</h3>
+            <p>欢迎加入来自纯净济州岛的innisfree官网商城！</p>
+        </div>
+        <div class="reg-explain"></div>
+        <div class="reg-form">
+            <p class="reg-from-tittle">
+                我的个人信息
+                <span>* 为必填项</span>
+            </p>
+            <div class="reg-form-main">
+                <p>
+                    <label><span>* </span>电子邮箱</label>
+                    <input type="text" ng-model="username" ng-blur = 'validateUserName()'>
+                    <span ng-class="{warnSpan:usernamewarnSpan}">{{usernameWarn}}</span>
+                </p>
+                <p>
+                    <label><span>* </span>手机号码</label>
+                    <input type="text" ng-model="telephoneN" ng-blur = 'validateTelephoneN()'>
+                    <span ng-class="{warnSpan:telephoneNWarnSpan}">{{telephoneNWarn}}</span>
+                </p>
+                <p>
+                    <label><span>* </span>姓名</label>
+                    <input type="text" ng-model="realName" ng-blur = 'validateRealName()'>
+                    <span ng-class="{warnSpan : realNameWarnSpan}">{{realNameWarn}}</span>
+                </p>
+                <p>
+                    <label><span>* </span>密码</label>
+                    <input type="password" ng-model="pwd" ng-blur = 'validatePwd()'>
+                    <span id="pwdSpanWarn" ng-class="{warnSpan : pwdWarnSpan}">{{pwdWarn}}</span>
+                </p>
+                <p>
+                    <label><span>* </span>确认密码</label>
+                    <input type="password" ng-model="confirmPwd" ng-blur = 'validateConfirmPwd()'>
+                    <span ng-class="{warnSpan : confirmPwdWarnSpan}">{{confirmPwdWarn}}</span>
+                </p>
+                <p class="p-check">
+                    <span>
+                        <input type="checkbox">
+                    已阅读 <a> 悦诗风吟使用条款 </a> 和
+                    <a>隐私声明</a> 并同意
+                    </span>
+                </p>
+                <input type="button" class="reg-btn" ng-click = 'validateReg()'>
+            </div>
+        </div>
+    </div>
+</div>

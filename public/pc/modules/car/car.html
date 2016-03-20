@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="modules/car/car.css" type="text/css"/>
+<div class="content">
+    <div class="step1on">
+        <div class="step-top">
+            <img src="images/car/orderFlow1_on.png">
+            <img src="images/car/arr_orderFlow.png">
+            <img src="images/car/orderFlow2.png">
+            <img src="images/car/arr_orderFlow.png">
+            <img src="images/car/orderFlow3.png">
+            <img src="images/car/arr_orderFlow.png">
+            <img src="images/car/orderFlow4.png">
+        </div>
+        <div class="step-bottom">
+            <img src="images/car/BG_step1On.gif">
+        </div>
+    </div>
+    <div class="carFrom">
+        <table class="carTable">
+            <thead>
+                <tr>
+                    <th class="check-all" >
+                        <input type="checkbox" id="checkAllBox" ng-model="checkedAll" ng-change = 'checkedAllChange()'>
+                        <img src="images/car/th_all.gif">
+                    </th>
+                    <th class="pdt-name">
+                        <img src="images/car/th_pdt%20(1).gif">
+                    </th>
+                    <th class="pdt-attribute">
+                        <img src="images/car/th_option.gif">
+                    </th>
+                    <th class="single-price">
+                        <img src="images/car/th_onePrice.gif">
+                    </th>
+                    <th class="quantity">
+                        <img src="images/car/th_quantity.gif">
+                    </th>
+                    <th class="price-unit">
+                        <img src="images/car/th_price.gif">
+                    </th>
+                    <th class="operation">
+                        <img src="images/car/th_action.gif">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in products">
+                    <td class="check-all">
+                        <input type="checkbox" ng-model="p.checked" ng-change = 'checkboxChange()'>
+                    </td>
+                    <td class="pdt-name">
+                        <img ng-src="images/car/{{p.p_car_img}}">
+                        <a>{{p.p_name}}</a>
+                    </td>
+                    <td class="pdt-attribute"></td>
+                    <td class="single-price">￥{{p.p_price}}</td>
+                    <td class="quantity">
+                        <input type="button"  class="quantity-down" ng-click = 'minusQuantity($index)'>
+                        <input type="text" class="quantity-text" ng-model="p.sc_count" ng-blur = 'changeQuantityByInput($index)'>
+                        <input type="button"  class="quantity-up" ng-click = 'addQuantity($index)'>
+                    </td>
+                    <td class="oneProductTotalPrice">￥{{p.p_price * p.sc_count}}</td>
+                    <td class="operation">
+                        <input type="button" class="toCollectionBtn">
+                        <input type="button" class="delBtn" ng-click = 'delProduct($index)'>
+                    </td>
+                </tr>
+
+                <tr class="tr-last">
+                    <td colspan="4" class="total-count">
+                        总订购商品数: <span>{{totalQuantity}} 件</span>
+                    </td>
+                    <td colspan="3" class="total-money">
+                        订单金额总价: <span>￥{{totalPrice}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="btn-area">
+            <input type="button" class="go-order">
+            <input type="button" class="go-buy">
+        </p>
+    </div>
+</div>
+<!--<script src="js/carFunction.js"></script>-->

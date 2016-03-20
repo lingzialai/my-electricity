@@ -1,0 +1,464 @@
+
+<link rel="stylesheet" href="modules/index/index.css" type="text/css"/>
+    <div class="content" >
+        <div class="content-top">
+            <div class="content-tittle">
+                <div class="content-tittle-left">
+                    <h3>产品类别</h3>
+                    <p>按产品类别查看悦诗风吟的商品</p>
+                </div>
+                <div class="content-tittle-right">
+                    <a><img src="images/index/categoryLine_on.gif"></a>
+                    <a><img src="images/index/categoryType.gif"></a>
+                    <a><img src="images/index/categoryMap.gif"></a>
+                </div>
+            </div>
+            <div class="content-top-nav">
+                <ul class="nav-top">
+                    <li class="nav-top-li1">
+                        <div>
+                            <a>基础护理</a>
+                            <span class="span-on"></span>
+                        </div>
+                        <ul class="li1-ul">
+                            <li><a ng-click = 'getAllProductByPage()'>查看全部</a></li>
+                            <li><a ng-click = 'getProductByCategory("护肤水")'>护肤水</a></li>
+                            <li><a ng-click = 'getProductByCategory("乳液")'>乳液</a></li>
+                            <li><a ng-click = 'getProductByCategory("精华液")'>精华液</a></li>
+                            <li><a ng-click = 'getProductByCategory("面霜")'>面霜</a></li>
+                            <li><a ng-click = 'getProductByCategory("眼霜")'>眼霜</a></li>
+                            <li><a ng-click = 'getProductByCategory("喷雾")'>喷雾</a></li>
+                            <li><a ng-click = 'getProductByCategory("唇部护理")'>唇部护理</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-top-li2">
+                        <div>
+                            <a>面膜</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li3">
+                        <div>
+                            <a>洁面与卸妆</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li4">
+                        <div>
+                            <a>防晒</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li5">
+                        <div>
+                            <a>面部底妆</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li6">
+                        <div>
+                            <a>彩妆</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li7">
+                        <div>
+                            <a>指甲油</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li8">
+                        <div>
+                            <a>身体护理</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li9">
+                        <div>
+                            <a>男士系列</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li10">
+                        <div>
+                            <a>优惠套装</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-top-li11">
+                        <div>
+                            <a>美容工具</a>
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-top-banner">
+                <div class="i-banner-left">
+                    <div class="wrapper1"><!-- 最外层部分 -->
+                        <div id="banner1"><!-- 轮播部分 -->
+                            <ul class="imgList" id="imgList"><!-- 图片部分 -->
+                                <li ng-repeat="p in hotProductList"><a href=""><img ng-src="images/index/{{p.p_hot_img}}" width="670px" height="346px" ng-click = "showDetail(p.p_id)"></a></li>
+                                <!--<li><a href="#"><img src="images/index/120443323096751mainBanner.jpg" width="670px" height="346px" alt="puss in boots2"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/120492511348355mainBanner.jpg" width="670px" height="346px" alt="puss in boots3"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/120538962409068mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/120613214461154mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/471729476502279mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/16440404923903873mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/16462714694731494mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                                <!--<li><a href="#"><img src="images/index/16636750747691123mainBanner.jpg" width="670px" height="346px" alt="puss in boots4"></a></li>-->
+                            </ul>
+                            <ul class="indexList"><!-- 图片右下角序号部分 -->
+                            <li class="indexOn">幸运抽奖</li>
+                            <li>美丽试用</li>
+                            <li>护理面膜</li>
+                            <li>石榴买赠</li>
+                            <li>雪儿上市</li>
+                            <li>大豆精华</li>
+                            <li>义卖活动</li>
+                            <li>抽奖预告</li>
+                            <li>套装买赠</li>
+                            </ul>
+                            <div class="leftBtn"></div>
+                            <div class="rightBtn"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="i-banner-right">
+                    <div class="main">
+                        <div class="con">
+                            <ul id="i-banner-right-ul">
+                                <li ng-repeat="p in saleProductList"><img ng-src="images/index/{{p.p_sale_img}}" ng-click = "showDetail(p.p_id)" alt=""/>
+                                <!--<li><img src="images/index/121710940702779mainBanner.jpg" alt=""/></li>-->
+                                <!--<li><img src="images/index/122678996375773mainBanner.jpg" alt=""/></li>-->
+                                <!--<li><img src="images/index/122678996375773mainBanner.jpg" alt=""/></li>-->
+                            </ul>
+                        </div>
+                        <div class="prev" id="prev"></div>
+                        <div class="next" id="next"></div>
+                        <div class="nav" id="nav">
+                            <!--<ul>-->
+                                <!--<li class="bg" id="bg"></li>-->
+                                <!--<li></li>-->
+                                <!--<li></li>-->
+                                <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-top-productFilter">
+                <div class="condition">
+                    <h4>皮肤类型</h4>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">所以肌肤</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">中性</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">油性</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">干性</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">混合性</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="condition">
+                    <h4>功效</h4>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">双重美白</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">补水修护</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">光泽滋润</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">美白提亮</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">毛孔管理</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">生机再生</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">粉刺舒缓</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">肤质提亮</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">弹性紧致</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">全面新生</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">蜜光保湿</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="condition">
+                    <h4>原料</h4>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">绿茶精粹</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">橄榄</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">火山岩泥</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">升级展颜</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">发酵豆</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">生机蜜柑维C</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">济州石榴</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">油菜花蜜</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">香榧</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">迷你敏</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">青麦</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">九重臻致</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">浆果美白</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">红酒</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">济州岛青柿</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">都市进化</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">青苹果</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">柑橘花香氛</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">山茶花</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">寒兰</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">栀子花</label>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-check">
+                                <span>
+                                    <label class="label">雪耳</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <a>
+                        <img src="images/index/btn_filterSearch.gif">
+                    </a>
+                    <a>
+                        <img src="images/index/btn_filterReset.gif">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content-search">
+            <!--<div class="product-filter-search">-->
+                <!--<p>-->
+                    <!--<label>在结果内查找</label>-->
+                    <!--<input type="text" class="input-text">-->
+                    <!--<input type="button" class="btn_search">-->
+                <!--</p>-->
+            <!--</div>-->
+            <ul class="product-filter-nav">
+                <li><a class="a-on">按最新顺序排列</a></li>
+                <li><a>按人气排列</a></li>
+                <li><a>按用户评价排列</a></li>
+                <li><a>价格从高到低</a></li>
+                <li><a>价格从低到高</a></li>
+                <li><a>按优惠排列</a></li>
+            </ul>
+            <div class="product-list">
+                <ul>
+                    <li ng-repeat="p in productList">
+                        <div>
+                            <img ng-src = 'images/index/{{p.p_index_img}}' ng-click = "showDetail(p.p_id)">
+                            <dl class="list-dl">
+                                <dd>
+                                    <img src="images/index/BG_func1.gif">
+                                    <p>预览</p>
+                                </dd>
+                                <dd>
+                                    <img src="images/index/BG_func2.gif">
+                                    <p>收藏夹</p>
+                                </dd>
+                                <dd class="no-border-right" ng-click = 'productToCar(p.p_id)'>
+                                    <img src="images/index/BG_func3.gif">
+                                    <p >购物车</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <p>{{p.p_name}}</p>
+                        <span>￥ {{p.p_price}}</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="list-page">
+                <input type="button" class="btn-pre" ng-show= 'curPage > 1' ng-click = 'pageDown()'>
+                <ul class="page-ul">
+                    <li ng-repeat="page in pageArr" ng-click = 'changePage(page)'>{{page}}</li>
+                </ul>
+                <input type="button" class="btn-next" ng-show = 'curPage < maxPage' ng-click = 'pageUp()'>
+            </div>
+        </div>
+    </div>
+<script src="js/indexFunction.js"></script>
+<!--</body>-->
+<!--</html>-->

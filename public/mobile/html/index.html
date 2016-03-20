@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <script src="../js/auto-size.js"></script>
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/Jquery.Query.js"></script>
+    <script src="../js/searchFunction.js"></script>
+    <script src="../js/index.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a class="menu-a">
+                    <img src="../images/btn_leftMenu_g.png">
+                </a>
+                <a class="logo-a"></a>
+                <a class="search-a" id="search-a">
+                    <img src="../images/btn_search_g.png" id="searchImg">
+                </a>
+                <a class="car-a">
+                    <img src="../images/btn_cart_g.png">
+                    <span id="carProductCount"> </span>
+                </a>
+            </div>
+            <div class="header-bottom">
+                <p><a href="index.html">中国官网暨官方商城</a></p>
+            </div>
+            <div class="header-bottom-search-area" id="searchArea">
+                <input type="text" placeholder="请输入关键字" id="searchText">
+                <a class="search-a">
+                    <img src="../images/btn_search_g.png" id="searchBtn">
+                </a>
+            </div>
+        </header>
+        <div class="nav">
+            <a class="my-main-page" href="login.html">
+                <img src="../images/ico_gnb1.png">
+                <span>我的主页</span>
+            </a>
+            <a class="activity">
+                <img src="../images/ico_gnb2.png">
+                <span>活动</span>
+            </a>
+            <a class="all-menu">
+                <img src="../images/ico_gnb3.png">
+                <span>全部菜单</span>
+            </a>
+        </div>
+        <div class="content">
+            <div class="i-banner">
+                <ul class="ul-img">
+                    <li>
+                        <img src="../images/123068011191404mainBanner.jpg">
+                    </li>
+                    <li>
+                        <img src="../images/123026872563339mainBanner.jpg">
+                    </li>
+                    <li>
+                        <img src="../images/123102024516216mainBanner.jpg">
+                    </li>
+                    <li>
+                        <img src="../images/122997035985810mainBanner.jpg">
+                    </li>
+                </ul>
+                <ul class="ul-state">
+                    <li>
+                        <a></a>
+                    </li>
+                    <li>
+                        <a></a>
+                    </li>
+                    <li>
+                        <a></a>
+                    </li>
+                    <li>
+                        <a class="noMarginRight"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="i-recommend">
+                <img src="../images/123396271390841mainBanner.jpg">
+            </div>
+            <div class="i-bestSells">
+                <ul class="i-bestSells-nav">
+                    <li>
+                        <a class="a-on" id="hotProductBtn">本周畅销产品</a>
+                    </li>
+                    <li>
+                        <a id="sellProductBtn">优惠商品</a>
+                    </li>
+                    <li>
+                        <a class="noMarginRight">手机专享</a>
+                    </li>
+                </ul>
+                <div class="i-bestSells-list">
+                    <ul id="i-bestSells-list-ul">
+                        <!--<li>-->
+                            <!--<img src="../images/1000002020_l.png" class="i-list-pdt-image">-->
+                            <!--<img src="../images/ico_mark_best.gif" class="best">-->
+                            <!--<p class="i-list-pdt-name">悦诗风吟绿茶精粹平衡保湿特别套装 2015版</p>-->
+                            <!--<p class="i-list-pdt-price">￥230.0</p>-->
+                            <!--<img src="../images/icon_cart.png" class="i-list-car">-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="i-bestSells-more">
+                    <a id="moreProductBtn">
+                        <span>显示更多(4 / 15)</span>
+                        <img src="../images/arr_listViewMore.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-logos">
+                <ul>
+                    <li>
+                        <img src="../images/BG_footerMenu1.png">
+                        <p>品牌简介</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu2.png">
+                        <p>济州岛故事</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu3.png">
+                        <p>互动游戏</p>
+                    </li>
+                    <li class="noMarginRight">
+                        <img src="../images/BG_footerMenu4.png">
+                        <p>专卖店导航</p>
+                    </li>
+                </ul>
+                <ul class="footer-logos-ul2">
+                    <li>
+                        <img src="../images/BG_footerMenu5.png">
+                        <p>分享小清新</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu6.png">
+                        <p>FAQ</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu7.png">
+                        <p>产品类别</p>
+                    </li>
+                    <li class="noMarginRight">
+                        <img src="../images/BG_footerMenu8.png">
+                        <p>会员服务</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#">登陆</a>
+                    </li>
+                    <li>
+                        <a href="#">注册会员</a>
+                    </li>
+                    <li>
+                        <a href="#">使用条款</a>
+                    </li>
+                    <li>
+                        <a href="#" class="noBorderRight">隐私条款</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <span>innisfree SNS</span>
+                <a class="footer-weibo">
+                    <img src="../images/BG_weibo.png">
+                    weibo</a>
+                <a class="footer-renren">
+                    <img src="../images/BG_renren.png">
+                    RenRen
+                </a>
+                <a class="to-pc">PC版本</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <img src="../images/footer_logo.png" class="footer_logo">
+                </div>
+                <div class="footer-bottom-right">
+                    <p>网站使用条款沪ICP备11011083号</p>
+                    <p>客服邮件：innisfree@innisfree.cn</p>
+                    <p>公司地址：上海市延安东路700号港泰广场23楼200001</p>
+                    <p>官网客服热线：021-61255625 （9：00~21：00）</p>
+                    <p>产品热线咨询：400-920-9238，800-920-9238</p>
+                    <p>Copyright@amonepaoifochina,All right reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

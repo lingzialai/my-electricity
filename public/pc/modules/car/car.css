@@ -1,0 +1,180 @@
+.content{
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    color:rgb(103, 102, 103);
+    font-size: 12px;
+    overflow: hidden;
+    padding-bottom: 100px;
+
+}
+.step1on{
+    padding: 50px 0;
+}
+.step-top img{
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.step-bottom{
+    padding: 20px 0 0 20px;
+}
+.carTable{
+    border-collapse: collapse;
+}
+.carTable thead tr{
+    border-top: 2px solid #7d7d7e;
+    border-bottom: 1px solid #c5c4c5;
+}
+.carTable thead tr th{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.check-all{
+    width: 70px;
+}
+.check-all input{
+    vertical-align: middle;
+}
+.pdt-name{
+    width: 310px;
+}
+.pdt-attribute{
+    width: 230px;
+}
+.single-price{
+    width: 100px;
+}
+.quantity{
+    width: 80px;
+}
+.price-unit{
+    width: 80px;
+}
+.oneProductTotalPrice{
+   text-align: center;
+   padding-top: 30px;
+    font-size: 16px;
+    color: #c6381d;
+    font-weight: bolder;
+}
+.operation{
+    width: 110px;
+}
+tbody tr td{
+    padding: 10px 0 0 0;
+    /*line-height: 80px;*/
+}
+/*tbody tr td {*/
+    /*text-align: center;*/
+/*}*/
+tbody .check-all input{
+    margin-left: 15px;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+}
+tbody .pdt-name{
+    overflow: hidden;
+    zoom: 1;
+}
+tbody .pdt-name img{
+    float: left;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+tbody .pdt-name a{
+    float: right;
+    width: 215px;
+    display: inline-block;
+    padding-top: 20px;
+}
+tbody .single-price{
+    color: #c6381d;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+tbody .quantity{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+tbody .quantity .quantity-down{
+    background: url("../../images/car/btn_quantityMinus.gif");
+}
+tbody .quantity .quantity-up{
+    background: url("../../images/car/btn_quantityPlus.gif");
+}
+tbody .quantity .quantity-down,.quantity-up{
+    width: 15px;
+    height: 11px;
+    outline: none;
+    border: none;
+}
+tbody .quantity .quantity-text{
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+tbody .operation{
+    display: block;
+    margin-top: 10px;
+}
+tbody .operation input{
+    display: block;
+    outline: none;
+    border: none;
+}
+.toCollectionBtn{
+    background: url("../../images/car/btn_directOrder_67x23.gif") no-repeat;
+    width: 67px;
+    height: 23px;
+    margin-left: 15px;
+}
+.delBtn{
+    background: url("../../images/car/btn_delete_67x23.gif");
+    width: 67px;
+    height: 23px;
+    margin-left: 15px;
+}
+table tr{
+    border-bottom: 1px solid #e8e7e8;
+}
+.tr-last{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+}
+.tr-last span{
+    color: #c6381d;
+    font-weight: bolder;
+}
+.total-count{
+    text-indent: 15px;
+}
+.total-money{
+    text-align: right;
+    padding-right: 30px;
+}
+.btn-area{
+    margin-top: 10px;
+    float: right;
+}
+.btn-area input{
+    width: 143px;
+    height: 34px;
+    border: none;
+    outline: none;
+}
+.go-order{
+    background: url("../../images/car/btn_selectedOrder.gif") no-repeat;
+
+}
+.go-buy{
+    background: url("../../images/car/btn_goOnShopping.gif") no-repeat;
+}

@@ -1,0 +1,135 @@
+.content{
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    color:rgb(103, 102, 103);
+    overflow: hidden;
+    zoom: 1;
+    padding-top: 20px;
+    font-size: 12px;
+}
+.content-left{
+    float: left;
+    background: url("../../images/login/BG_lnbUtil.gif") no-repeat;
+    width: 158px;
+    height: 228px;
+    padding: 70px 10px 0;
+}
+.content-left ul li{
+    margin-bottom: 10px;
+}
+.content-left ul li a{
+    display: block;
+    padding-left: 10px;
+    color: #000;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.content-left ul li .a-on{
+    background-color: #8fb6b8;
+    color: #fff;
+}
+.content-left ul li a:hover{
+    background-color: #8fb6b8;
+    color: #fff;
+}
+.content-right{
+    float: left;
+    padding-left: 20px;
+    padding-bottom: 90px;
+}
+.content-right-tittle h3{
+    font-size: 24px;
+    color: #000;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+.content-right-tittle p{
+    font-size: 12px;
+    color: #787778;
+    line-height: 20px;
+    margin-top: 15px;
+}
+.reg-explain{
+    background: url("../../images/reg/txt_welcome_inni.gif") no-repeat;
+    width: 780px;
+    height: 169px;
+    margin-top: 30px;
+}
+.reg-form{
+    margin-top: 35px;
+}
+.reg-from-tittle{
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+.reg-from-tittle span{
+    float: right;
+    color: #b73d21;
+    font-size: 12px;
+}
+.reg-form-main{
+    margin-top: 10px;
+    border-top: 1px solid #ebeaeb;
+}
+.reg-form-main p{
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ebeaeb;
+}
+.reg-form-main p label{
+    width: 125px;
+    background-color: #f9f8f9;
+    text-indent: 5px;
+    color: #636f7a;
+    display: inline-block;
+}
+.reg-form-main p label span{
+    color: #b73d21;
+}
+.reg-form-main p input{
+    width: 210px;
+    height: 18px;
+    border: 1px solid #ebeaeb;
+    margin-left: 15px;
+}
+.reg-form-main p>span{
+    margin-left: 20px;
+}
+.spanWarn{
+    margin-left: 20px;
+}
+.p-check input{
+    width: auto !important;
+    vertical-align: middle;
+}
+.p-check span{
+    display: block;
+    width: 290px !important;
+    margin: 0 auto;
+}
+.p-check a{
+    text-decoration: underline;
+    color: #5e7e90;
+}
+.reg-btn{
+    display: block;
+    background: url("../../images/reg/reg-btn.jpg") no-repeat;
+    width: 90px;
+    height: 24px;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+}
+.warnSpan{
+    color: red !important;
+    margin-left: 20px;
+}

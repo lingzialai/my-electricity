@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="modules/login/login.css" type="text/css"/>
+<div class="content">
+    <div class="content-left">
+        <ul>
+            <li><a class="a-on">会员登录</a></li>
+            <li><a href="#/reg">加入会员</a></li>
+            <li><a >找回密码</a></li>
+            <li><a >使用条款</a></li>
+            <li><a >隐私声明</a></li>
+        </ul>
+    </div>
+    <div class="content-right">
+        <div class="content-right-tittle">
+            <h3>会员信息</h3>
+            <p>欢迎加入来自纯净济州岛的innisfree官网商城！</p>
+        </div>
+        <div class="content-form">
+            <div class="content-form-main">
+                <img src="images/login/title_login.gif">
+                <div class="login-main">
+                    <div class="login-main-left">
+                        <p>
+                            <label>邮箱地址</label>
+                            <input type="text" ng-model="username">
+                        </p>
+                        <p>
+                            <label>密码</label>
+                            <input type="password" ng-model="password">
+                        </p>
+                    </div>
+                    <div class="login-main-right">
+                        <input type="button" ng-click = 'login()'>
+                    </div>
+                    <p class="p-check">
+                        <input type="checkbox">
+                        <label>保存邮箱</label>
+                    </p>
+                    <p class="login-prompt">- 输入电子邮箱地址和密码进行登陆时，请务必区分大小写。</p>
+                    <p class="login-prompt">- IE6.0 用户如出现登陆后页面无反应的情况，请刷新页面或点击网站其他页面。</p>
+                </div>
+                    <p class="login-other">
+                        使用合作网站账号登陆
+                        <span class="img-area">
+                            <img src="images/login/ico_sns_wechat.gif">
+                            <img src="images/login/ico_sns_alipay.gif">
+                            <img src="images/login/ico_sns_qq.gif">
+                        </span>
+                    </p>
+            </div>
+        </div>
+        <div class="login-explain">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+.content{
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    color:rgb(103, 102, 103);
+    overflow: hidden;
+    zoom: 1;
+    padding-top: 20px;
+    font-size: 12px;
+}
+.content-left{
+    float: left;
+    background: url("../../images/login/BG_lnbUtil.gif") no-repeat;
+    width: 158px;
+    height: 228px;
+    padding: 70px 10px 0;
+}
+.content-left ul li{
+    margin-bottom: 10px;
+}
+.content-left ul li a{
+    display: block;
+    padding-left: 10px;
+    color: #000;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.content-left ul li .a-on{
+    background-color: #8fb6b8;
+    color: #fff;
+}
+.content-left ul li a:hover{
+    background-color: #8fb6b8;
+    color: #fff;
+}
+.content-right{
+    float: left;
+    padding-left: 20px;
+}
+.content-right-tittle h3{
+    font-size: 24px;
+    color: #000;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+.content-right-tittle p{
+    font-size: 12px;
+    color: #787778;
+    line-height: 20px;
+    margin-top: 15px;
+}
+.content-form{
+    background: url("../../images/login/BG_loginBox.gif") no-repeat;
+    width: 780px;
+    height: 307px;
+    margin: 30px 0;
+
+}
+.content-form-main{
+    margin-left: 295px;
+    padding-top: 10px;
+}
+.login-main{
+    padding: 16px 0;
+    border-top: 1px dashed #c4c3c4;
+    border-bottom: 1px dashed #c4c3c4;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 10px;
+    width: 435px;
+}
+.login-main-left{
+    float: left;
+}
+.login-main-left p{
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.login-main-left p label{
+    width: 125px;
+    display: inline-block;
+}
+.login-main-left p input{
+    width: 178px;
+    height: 22px;
+    border: 1px solid #dfdedf;
+    outline: none;
+}
+.login-main-right{
+    float: right;
+}
+.login-main-right input{
+    background: url("../../images/login/btn_login.gif") no-repeat;
+    width: 73px;
+    height: 57px;
+    border: none;
+    outline: none;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+.p-check{
+    padding-left: 124px;
+    clear: both;
+}
+.p-check label{
+    vertical-align: middle;
+}
+.p-check input{
+    vertical-align: middle;
+}
+.login-prompt{
+    margin-top: 10px;
+}
+.login-other{
+    font-weight: bolder;
+    /*color: #000;*/
+    margin-top: 10px;
+}
+.img-area{
+    display: inline-block;
+    margin-left: 30px;
+}
+.img-area img{
+    margin-right: 20px;
+}
+.login-explain{
+    background: url("../../images/login/txt_loginNote.gif") no-repeat;
+    width: 780px;
+    height: 262px;
+    margin-bottom: 90px;
+}

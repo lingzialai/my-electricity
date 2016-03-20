@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="modules/info/info.css" type="text/css"/>
+<div class="content">
+    <div class="brief-intro">
+        <div class="intro-tittle">
+            <p>
+                <span class="product-name">
+                    {{productOne.p_name}}
+                </span>
+                <img src="images/info/icon_innibest.png">
+            </p>
+        </div>
+        <div class="brief-info-main">
+            <div class="product-img-area">
+                <img  ng-src = 'images/info/{{productOne.p_detail_img}}' class="product-img-l">
+                <p class="share">分享到：
+                    <a><span class="weibo"></span></a>
+                    <a><span class="kaixin"></span></a>
+                    <a><span class="renren"></span></a>
+                    <a><span class="qq"></span></a>
+                </p>
+            </div>
+            <div class="product-intro-area">
+                <p class="pdt-desc">{{productOne.p_describe}}</p>
+                <div class="desc-list">
+                    <dl class="code">
+                        <dt>商品编码</dt>
+                        <dd>{{productOne.p_code}}</dd>
+                    </dl>
+                    <dl class="status">
+                        <dt>状态</dt>
+                        <dd>销售中</dd>
+                    </dl>
+                    <dl class="price">
+                        <dt>市场价</dt>
+                        <dd id="price">￥{{price}}</dd>
+                    </dl>
+                    <dl class="point">
+                        <dt>购物积分</dt>
+                        <dd>{{productOne.p_integral}}</dd>
+                    </dl>
+                    <dl class="manufacture">
+                        <dt>产地</dt>
+                        <dd>韩国</dd>
+                    </dl>
+                    <div class="optionBox">
+                        <dl class="option">
+                            <dt>购买数量</dt>
+                            <!--<dd class="optionDetail">-->
+                                <!--<select class="select" style="width: 217px" id="select">-->
+                                    <!--<option>请选择商品属性</option>-->
+                                    <!--<option>芦荟</option>-->
+                                    <!--<option>绿茶</option>-->
+                                <!--</select>-->
+                                <!--<p class="option_msg">*可添加本商品其他选项</p>-->
+                            <!--</dd>-->
+                            <dd class="optionDetail">
+                                <input type="text" class="quantity-input" id="quantity-input" ng-model= quantity>
+                                <input type="button" class="quantityUp" id="quantityUp" ng-click = "addQuantity()">
+                                <input type="button" class="quantityDown" id="quantityDown" ng-click = 'minusQuantity()'>
+                                <span class="quantity-unit">个</span>
+                            </dd>
+
+                        </dl>
+                    </div>
+                </div>
+                <div class="desc-total-money">
+                    <dl class="totalMoney">
+                        <dt>总价</dt>
+                        <dd>￥{{totalPrice}}</dd>
+                    </dl>
+                </div>
+                <div class="buyBtn">
+                    <input type="button" class="buy-immediate">
+                    <input type="button" class="toCar" ng-click = "addProductToCar()">
+                    <input type="button" class="collection">
+                </div>
+                <div class="product-evaluate-brief">
+                    <div class="evaluate-left">
+                        <p>商品评价</p>
+                        <img src="images/info/icon_review2_4.png">
+                    </div>
+                    <div class="evaluate-right">
+                        <p>
+                            <a>分享小清新：<span>3 </span>条</a>
+                            <a>用户评价：<span>44 </span>条</a>
+                        </p>
+                        <p>面膜</p>
+                        <p>石榴面膜</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pdtSumarry">
+        <h5>商品信息</h5>
+        <table class="pdtSumarry-table">
+            <tr>
+                <th>商品名称</th>
+                <td class="td-left">{{productOne.p_name}}</td>
+                <th>类型</th>
+                <td class="td-right">面膜贴</td>
+            </tr>
+            <tr>
+                <th>适用肤质</th>
+                <td class="td-left">所有肌肤</td>
+                <th>容量</th>
+                <td class="td-right"></td>
+            </tr>
+            <tr>
+                <th>适用部位</th>
+                <td class="td-left"></td>
+                <th>主要功效</th>
+                <td class="td-right"></td>
+            </tr>
+            <tr>
+                <th>使用注意事项</th>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <th>产品成分</th>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="pdt-detail-img-info">
+        <div class="detail-nav">
+            <ul>
+                <li><a href=""><img src="images/info/productDetail_tab1_on.gif" alt=""/></a></li>
+                <li class="have-bg"><a href=""><img src="images/info/productDetail_tab2.gif" alt=""/></a></li>
+                <li class="have-bg"><a href=""><img src="images/info/productDetail_tab3.gif" alt=""/></a></li>
+                <li class="have-bg"><a href=""><img src="images/info/productDetail_tab4.gif" alt=""/></a></li>
+            </ul>
+        </div>
+        <div class="detail-main">
+            <div class="detail-main-left">
+                <img ng-src="images/info/{{productOne.p_intro_img}}">
+            </div>
+            <div class="detail-main-right">
+                <div class="detail-main-right-tittle">同类其他商品</div>
+                <ul class="other-product">
+                    <li>
+                        <img src="images/info/1000006060_m.png">
+                        <p><a>悦诗风吟真翠先润面膜 5款2月新品上市</a></p>
+                        <p class="other-product-price">￥8.0</p>
+                    </li>
+                    <li>
+                        <img src="images/info/1000007760_m.png">
+                        <p><a>悦诗风吟真翠先润面膜 5款2月新品上市</a></p>
+                        <p class="other-product-price">￥8.0</p>
+                    </li>
+                    <li>
+                        <img src="images/info/1000008660_m.png">
+                        <p><a>悦诗风吟真翠先润面膜 5款2月新品上市</a></p>
+                        <p class="other-product-price">￥8.0</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/infoFunction.js"></script>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <script src="../js/auto-size.js"></script>
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/searchFunction.js"></script>
+    <script src="../js/Jquery.Query.js"></script>
+    <script src="../js/search.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a class="menu-a">
+                    <img src="../images/btn_leftMenu_g.png">
+                </a>
+                <a class="logo-a"></a>
+                <a class="search-a" id="search-a">
+                    <img src="../images/btn_search_g.png" id="searchImg">
+                </a>
+                <a class="car-a">
+                    <img src="../images/btn_cart_g.png">
+                </a>
+            </div>
+            <div class="header-bottom">
+                <p><a href="index.html">中国官网暨官方商城</a></p>
+            </div>
+            <div class="header-bottom-search-area" id="searchArea">
+                <input type="text" placeholder="请输入关键字" id="searchText">
+                <a class="search-a" id="searchBtn">
+                    <img src="../images/btn_search_g.png">
+                </a>
+            </div>
+        </header>
+        <div class="nav">
+            <a class="my-main-page" href="login.html">
+                <img src="../images/ico_gnb1.png">
+                <span>我的主页</span>
+            </a>
+            <a class="activity">
+                <img src="../images/ico_gnb2.png">
+                <span>活动</span>
+            </a>
+            <a class="all-menu">
+                <img src="../images/ico_gnb3.png">
+                <span>全部菜单</span>
+            </a>
+        </div>
+        <div class="s-content">
+            <p class="r-tittle">
+                产品搜索结果
+                <img src="../images/btn_goBack.png">
+            </p>
+            <div class="s-content-main">
+                <div class="s-search-filterArea">
+                    <p class="s-search-s-search-tittle">
+                        <span class="s-pdt-name" id="searchProductName">“面膜”</span>
+                        搜索结果：共
+                        <span class="s-pdt-quantity" id="s-pdt-quantity">41</span>
+                        件
+                    </p>
+                    <div class="s-filter">
+                        <select id="categorySelect">
+                            <option value="1">护肤水</option>
+                            <option value="2">乳液</option>
+                            <option value="3">精华液</option>
+                            <option value="4">面霜</option>
+                            <option value="5">眼霜</option>
+                            <option value="6">喷雾</option>
+                            <option value="7">唇部护理</option>
+                        </select>
+                        <a class="s-filter-more" id="categorySearchBtn">按类型搜索
+                            <!--<img src="../images/arr_listViewMore.png">-->
+                        </a>
+                    </div>
+                </div>
+                <div class="s-pdt-list">
+                    <ul class="s-pdt-list-ul" id="s-pdt-list-ul">
+                        <!--<li>-->
+                            <!--<div class="s-pdt-list-left">-->
+                                <!--<img src="../images/1000006060_m.png">-->
+                            <!--</div>-->
+                            <!--<div class="s-pdt-list-right">-->
+                                <!--<p class="s-pdt-list-name">悦诗风吟真萃鲜润面膜 5款2月新品上市</p>-->
+                                <!--<p class="s-pdt-list-price">￥8.00</p>-->
+                                <!--<p>-->
+                                    <!--<a class="s-pdt-list-car">-->
+                                        <!--<img src="../images/icon_cart.png">-->
+                                    <!--</a>-->
+                                    <!--<span class="quantity-btns">-->
+                                        <!--<a class="quantityOption_minus">-->
+                                            <!-&#45;&#45;-->
+                                        <!--</a>-->
+                                        <!--<input type="text" value="1">-->
+                                        <!--<a class="quantityOption_plus">-->
+                                            <!--+-->
+                                        <!--</a>-->
+                                    <!--</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</li>-->
+
+                    </ul>
+                </div>
+                <!--<div class="i-bestSells-more">-->
+                    <!--<a>-->
+                        <!--显示更多(4 / 15)-->
+                        <!--<img src="../images/arr_listViewMore.png">-->
+                    <!--</a>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <footer>
+            <div class="footer-logos">
+                <ul>
+                    <li>
+                        <img src="../images/BG_footerMenu1.png">
+                        <p>品牌简介</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu2.png">
+                        <p>济州岛故事</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu3.png">
+                        <p>互动游戏</p>
+                    </li>
+                    <li class="noMarginRight">
+                        <img src="../images/BG_footerMenu4.png">
+                        <p>专卖店导航</p>
+                    </li>
+                </ul>
+                <ul class="footer-logos-ul2">
+                    <li>
+                        <img src="../images/BG_footerMenu5.png">
+                        <p>分享小清新</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu6.png">
+                        <p>FAQ</p>
+                    </li>
+                    <li>
+                        <img src="../images/BG_footerMenu7.png">
+                        <p>产品类别</p>
+                    </li>
+                    <li class="noMarginRight">
+                        <img src="../images/BG_footerMenu8.png">
+                        <p>会员服务</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#">登陆</a>
+                    </li>
+                    <li>
+                        <a href="#">注册会员</a>
+                    </li>
+                    <li>
+                        <a href="#">使用条款</a>
+                    </li>
+                    <li>
+                        <a href="#" class="noBorderRight">隐私条款</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <span>innisfree SNS</span>
+                <a class="footer-weibo">
+                    <img src="../images/BG_weibo.png">
+                    weibo</a>
+                <a class="footer-renren">
+                    <img src="../images/BG_renren.png">
+                    RenRen
+                </a>
+                <a class="to-pc">PC版本</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <img src="../images/footer_logo.png" class="footer_logo">
+                </div>
+                <div class="footer-bottom-right">
+                    <p>网站使用条款沪ICP备11011083号</p>
+                    <p>客服邮件：innisfree@innisfree.cn</p>
+                    <p>公司地址：上海市延安东路700号港泰广场23楼200001</p>
+                    <p>官网客服热线：021-61255625 （9：00~21：00）</p>
+                    <p>产品热线咨询：400-920-9238，800-920-9238</p>
+                    <p>Copyright@amonepaoifochina,All right reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
